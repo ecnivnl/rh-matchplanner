@@ -27,7 +27,7 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 			$regel['voorletter'] = trim($arr[4]);
 			$regel['achternaam'] = trim($arr[5]);
 			$regel['vernummer'] = trim($arr[14]);
-			$regel['vernaam'] = trim($arr[15]);
+			$regel['vernaam'] = str_replace("  "," ",trim($arr[15]));
 			$regel['knsa'] = trim($arr[16]);
 			$knsa = $regel['knsa'];
 
