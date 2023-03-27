@@ -1,5 +1,12 @@
+<html>
+<head>
+</head>
+<body>
 <?php
+
 include("config.php");
+
+print "<h1>Aanmelden voor ".$wedstrijd."</h1>";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -16,16 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			$regel['knsa'] = trim($arr[16]);
 			$knsa = $regel['knsa'];
 			$bezoekers[$knsa]['aantal']++;
-			if(trim($arr[20]) == "KKP")
-			{
-				$bezoeker[$knsa]['KKP'] = 1;
-			}
-			else if(trim($arr[20]) == "GKP")
-			{
-				$bezoeker[$knsa]['GKP'] = 1;
-			}
-				
-		 
+			$bezoekers[$knsa]['naam']=trim($arr[4])." ".trim($arr[5]);
+			$bezoekers[$knsa]['diciplines'][] = trim($arr[20]);
+	 
 		   $i++;
 		}
 		fclose($file);
@@ -33,29 +33,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 	if($bezoekers[$knsanummer]['aantal'] < 1)
 	{
-		print "deze bezoeker komt niet voor";
+		print "<b><font style=\"color:red\">Deze bezoeker komt niet voor</font></b><br><br>";
 	}
 	else
 	{
-		$totaalprijs = $bezoekers[$knsanummer]['aantal']*$wedstrijdprijs;
-		print "Kosten: $totaalprijs<br>
-		Aanmelden binnen Matchmaker<br>
+		print "Naam: ".$bezoekers[$knsa]['naam']."<br>";
+		$totaalprijs = number_format($bezoekers[$knsanummer]['aantal']*$wedstrijdprijs,2);
+		print "Kosten: $totaalprijs<br>";
 		
-		
-		";
+		$i = 0;
+		while($i < sizeof($bezoekers[$knsanummer]['diciplines']))
+		{
+			print "Aanmelden voor dicipline <b>".$bezoekers[$knsanummer]['diciplines'][$i]."</b><br>";
+			$i++;
+		}
+		print "<br><br>";
 	}
 }
 
 
 		print "
-		<html>
-		<head>
-		</head>
-		<body>
+		
 		<form action=\"aanmelden.php\" method=\"POST\">
 		  KNSA-licentienummer: <input type=\"text\" name=\"knsa\" value=\"\" autofocus><br>
-		  <input type=\"submit\" value=\"Submit\">
+		  <input type=\"submit\" value=\"Aanmelden\">
 		</form>
+		
+		<img width=\"100\" src=\"".$vereniging['logo']."\">
 		";
 
 
