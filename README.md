@@ -26,6 +26,7 @@ Natuurlijk is het handig om te weten hoe je dit kan gebruiken. Je kan dit downlo
 - Downloaden csv-bestand (door ; gescheiden) van baanplanner. Sla deze op als baanplanner_export.csv
 - Hernoemen checkin_example.log naar checkin.log
 - Hernoemen betaald_example.log naar betaald.log
+- Tenslotte: stuur me een berichtje dat je het gaat gebruiken of overweegt
 
 ## Is het ook hosted beschikbaar?
 
@@ -43,7 +44,7 @@ Zeker! Neem daarvoor contact op met de developer via 088-4004000 of vraag het na
 
 ## Hulp nodig
 
-- Omdat het (semi)gratis code is, is er geen (gegarandeerde) support op de tools, tenzij je gebruik maakt van de door ons gehoste omgeving. Heb je vragen, kan je een bericht achterlaten hier op github, wellicht kunnen we er iets mee.
+Omdat het (semi)gratis code is, is er geen (gegarandeerde) support op de tools, tenzij je gebruik maakt van de door ons gehoste omgeving. Heb je vragen, kan je een bericht achterlaten hier op github, wellicht kunnen we er iets mee.
 
 ## Wat komt er nog in?
 
@@ -52,3 +53,12 @@ De volgende feature requests staan nog op de planning:
 - Versturen van betaallinks (via Mollie)
 - Koppeling met een CCV-pinautomaat
 - Versturen van mails
+
+## Legal info
+
+- Developer is niet aansprakelijk voor de inzet van dit pakket, noch de gevolgen hiervan
+- Developer is niet aansprakelijk voor eventuele AVG-impact
+- Het is de verantwoordelijkheid van gebruiker om de software te controleren
+- Gebruiker mag de software niet aanpassen, zonder toestemming van de Developer
+- Alleen KNSA-geregistreerde verenigingen mogen gebruik maken van deze tools
+- Developer houdt zich het recht voor om gebruik door specifieke verenigingen te weigeren
