@@ -30,7 +30,7 @@ Natuurlijk is het handig om te weten hoe je dit kan gebruiken. Je kan dit downlo
 
 ## Is het ook hosted beschikbaar?
 
-Zeker! Neem daarvoor contact op met de developer via 088-4004000 of vraag het na bij je eigen (web)hoster.
+Zeker! Neem daarvoor contact op met de developer via 088-4004000 of vraag het na bij je eigen (web)hoster, IT-partij of tech-savvy-lid.
 
 ## Minimum systeemeisen
 
