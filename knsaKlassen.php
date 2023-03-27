@@ -1,6 +1,6 @@
 <?php
 
-include('config.php');
+require_once('config.php');
 
 function removeTags($text)
 {
@@ -54,7 +54,7 @@ while($i < sizeof($arr))
 }
 
 
-print_r($knsaregister);
+// print_r($knsaregister);
 
 
 ?>
