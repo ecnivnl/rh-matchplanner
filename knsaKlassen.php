@@ -22,12 +22,8 @@ $apx = strpos($response,"<");
 $response = substr($response,$apx);
 $response = substr($response,0,strpos($response,"footer"));
 
-
-
-
-
 $arr = explode("\n",$response);
-// print_r($arr);die();
+
 $i = 0;
 while($i < sizeof($arr))
 {
@@ -59,14 +55,6 @@ while($i < sizeof($arr))
 
 
 print_r($knsaregister);
-
-
-
-
-
-
-
-
 
 
 ?>
