@@ -1,5 +1,6 @@
 <?php
 
+
 require_once('config.php');
 
 function removeTags($text)
@@ -7,7 +8,6 @@ function removeTags($text)
 	$text = str_replace("<td>","",$text);
 	$text = str_replace("</td>","",$text);
 	return trim($text);
-	
 }
 
 $dargs=array("ssl"=>array("verify_peer"=>false,"verify_peer_name"=>false),"http"=>array('timeout' => 60, 'user_agent' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.9) Gecko/20071025 Firefox/3.0.0.1'));
@@ -53,8 +53,13 @@ while($i < sizeof($arr))
 	$i++;
 }
 
-
-// print_r($knsaregister);
+if($_GET['download'] == "yes")
+{
+	print "<PRE>";
+	print_r($knsaregister);
+	print "</PRE>";
+}
+// 
 
 
 ?>
