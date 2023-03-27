@@ -1,10 +1,6 @@
 <?php
 
-$vereniging['naam'] = "SSV Robin Hood";
-$vereniging['adres'] = "Parklaan 82";
-$vereniging['postcode'] = "3448ZM";
-$vereniging['plaats'] = "Woerden";
-$vereniging['knsa'] = "2570";
+include("config.php");
 
 require_once("fpdf/fpdf.php");
 
