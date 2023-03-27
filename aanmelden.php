@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		print "Naam: ".$bezoekers[$knsa]['naam']."<br>";
 		$totaalprijs = number_format($bezoekers[$knsanummer]['aantal']*$wedstrijdprijs,2);
 		print "Kosten: $totaalprijs<br>";
+		print "<a target=\"_blank\" href=\"kwitantie.php?knsa=$knsa\">Kwitantie</a><br>";
 		//eventueel aansturen pinautomaat
 		
 		$i = 0;
