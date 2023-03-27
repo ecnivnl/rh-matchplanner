@@ -13,7 +13,7 @@ Met de tools kan je:
 
 ## Wat kost het?
 
-Het gebruik van Matchplanner als open-source kost je (bijna) niets. Echter, ik ben van mening dat de tool je (vrijwilligers) een hoop werk uit handen neemt. Mocht ik (persoonlijk) me aan (willen) melden voor een wedstrijd, zal de vereniging een plek (KKP, SEPL en/of SEPZ) organiseren én daarvoor geen kosten in rekening brengen.
+Het gebruik van Matchplanner als open-source kost je (bijna) niets. Echter, ik ben van mening dat de tool je (vrijwilligers) een hoop werk uit handen neemt. Mocht ik (persoonlijk) me aan (willen) melden voor een wedstrijd, zal de vereniging een plek (KKP, SEPL en/of SEPZ) organiseren én daarvoor maximaal 5 euro aan kosten in rekening brengen.
 
 ## Is het ook hosted beschikbaar?
 
