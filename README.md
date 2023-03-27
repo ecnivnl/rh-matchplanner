@@ -22,7 +22,7 @@ Het gebruik van Matchplanner als open-source kost je (bijna) niets. Echter, ik b
 ## Hoe gebruik ik het
 
 Natuurlijk is het handig om te weten hoe je dit kan gebruiken. Je kan dit downloaden (door git of door het downloaden van de bestanden zelf) en deze plaatsen op een webserver met PHP. Daarna zijn de volgende stappen noodzakelijk:
-- Hernoemen config_example.php naar config.php
+- Hernoemen config_example.php naar config.php en invullen gegevens
 - Downloaden csv-bestand (door ; gescheiden) van baanplanner. Sla deze op als baanplanner_export.csv
 - Hernoemen checkin_example.log naar checkin.log
 - Hernoemen betaald_example.log naar betaald.log
@@ -38,7 +38,12 @@ Zeker! Neem daarvoor contact op met de developer via 088-4004000 of vraag het na
 - Toegang tot internet vanaf de webserver (vanwege de KNSA-klassen)
 
 ## Aanbevolen tools
+
 - QR-code- of barcodescanner
+
+## Hulp nodig
+
+- Omdat het (semi)gratis code is, is er geen (gegarandeerde) support op de tools, tenzij je gebruik maakt van de door ons gehoste omgeving. Heb je vragen, kan je een bericht achterlaten hier op github, wellicht kunnen we er iets mee.
 
 ## Wat komt er nog in?
 
