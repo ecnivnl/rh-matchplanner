@@ -1,10 +1,10 @@
 # Matchplanner
 
-## Wat is het
+## Wat is het?
 
 MatchPlanner (naam kan nog veranderen) is een set met tools geschreven door Vince van Domburg na de Service Pistool wedstrijden van Schietvereniging SSV Robin Hood te Woerden in maart 2023.
 
-## Wat kan je er mee
+## Wat kan je er mee?
 
 Met de tools kan je:
 - data vanuit Baanplanner verrijken met de klasses vanuit KNSA
@@ -46,7 +46,7 @@ Klopt! Maar ik ben backenddeveloper, geen frontendspecialist.
 
 - QR-code- of barcodescanner
 
-## Hulp nodig
+## Hulp nodig?
 
 Omdat het (semi)gratis code is, is er geen (gegarandeerde) support op de tools, tenzij je gebruik maakt van de door ons gehoste omgeving. Heb je vragen, kan je een bericht achterlaten hier op github, wellicht kunnen we er iets mee.
 
