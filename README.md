@@ -32,6 +32,10 @@ Natuurlijk is het handig om te weten hoe je dit kan gebruiken. Je kan dit downlo
 
 Zeker! Neem daarvoor contact op met de developer via 088-4004000 of vraag het na bij je eigen (web)hoster, IT-partij of tech-savvy-lid.
 
+## Het ziet er niet heel slick uit he?
+
+Klopt! Maar ik ben backenddeveloper, geen frontendspecialist.
+
 ## Minimum systeemeisen
 
 - Linux-webhostingomgeving
