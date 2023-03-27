@@ -32,21 +32,13 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 			{
 				// print "GKP";
 				$regel['klasse'] = $knsaregister[$knsa]['SEPZ'];
-				
 			}
 			else
 			{
 				print $arr[20];
 			}
 			
-			
-			
-			// print_r($regel);
 			print "".$regel['dag'].";".$regel['datum'].";".$regel['baan'].";".$regel['serie'].";".$regel['voorletter'].";".$regel['achternaam'].";".$regel['vernummer'].";".$regel['vernaam'].";".$regel['knsa'].";".$regel['klasse'].";;\r\n";
-			
-		
-		
-
 	   }
 	   $i++;
     }
