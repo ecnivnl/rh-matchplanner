@@ -7,5 +7,6 @@ $vereniging['plaats'] = "";
 $vereniging['knsa'] = "";
 
 $downloadurl = "";
+$wedstrijd = "Service Pistool 29-04-2023";
 
 ?>

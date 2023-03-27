@@ -12,7 +12,7 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $page++;
 $pdf->SetFont('Helvetica','B',14);
-$pdf->Cell(50,10,'Scoreformulier Wedstrijd Service Pistool 26-03-2023 - '.$_GET['tijd']." (baan ".$_GET['baan'].")",0,0);
+$pdf->Cell(50,10,"Wedstrijduitslag ".$wedstrijd.' - '.$_GET['tijd']." (baan ".$_GET['baan'].")",0,0);
 $pdf->Ln(6);
 $pdf->SetFont('Helvetica','B',12);
 $naam = ltrim($_GET['voorletter']." ".$achternaam);
