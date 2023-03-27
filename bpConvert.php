@@ -1,3 +1,12 @@
+<?php
+
+/* Copyright (C) Ecniv Group BV
+ * Use by any KNSA-licensed organisation permitted (only)
+ * See https://github.com/ecnivnl/rh-matchplanner/ for license 
+ * Written by Vince van Domburg (@ecnivnl)
+ */
+ 
+ ?>
 dag;datum;baan;serie;voorletter;achternaam;vernummer;vernaam;knsa;klasse;;
 <?php
 

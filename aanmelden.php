@@ -1,3 +1,13 @@
+<?php
+
+/* Copyright (C) Ecniv Group BV
+ * Use by any KNSA-licensed organisation permitted (only)
+ * See https://github.com/ecnivnl/rh-matchplanner/ for license 
+ * Written by Vince van Domburg (@ecnivnl)
+ */
+ 
+ ?>
+
 <html>
 <head>
 </head>
@@ -50,8 +60,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 			$i++;
 		}
 		print "<br><br>";
-		//eventueel: registreren in database om bij te houden wie er wel/niet is
-		//of: eventueel aanpassen baanplanner_export.csv met 'aanwezig'
+		$nu = date("Y-m-d H:i:s");
+		$current = file_get_contents("checkin.log");
+		$current .= $knsanummer.";".$nu."\n";
+		file_put_contents("checkin.log", $current);
 		
 	}
 }
@@ -61,9 +73,11 @@ print "
 	  KNSA-licentienummer: <input type=\"text\" name=\"knsa\" value=\"\" autofocus><br>
 	  <input type=\"submit\" value=\"Aanmelden\">
 	</form>
-	
-	<img width=\"100\" src=\"".$vereniging['logo']."\">
-	";
+";
+$nu = date("Y-m-d H:i:s");
+print "Last updated: $nu<br><br><br>
+<img width=\"100\" src=\"".$vereniging['logo']."\"><br><br><br><br>
+Software by Ecniv Group BV - Vince van Domburg";
 
 
 
