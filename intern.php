@@ -1,5 +1,6 @@
 <?php 
 
+include('config.php');
 
 if($_GET['type'] == "download")
 		{
@@ -23,7 +24,7 @@ if ($file = fopen("intern.csv", "r")) {
 		$arr[16] = str_replace(" ","",$arr[16]);
 		if($_GET['type'] == "download")
 		{
-			print "wget -O ".$arr[2]."-".$arr[3].".pdf \"https://ecniv.dev/robinhood/matchplanner/pdf.php?baan=&dicipline=".$arr[3]."&knsa=".$arr[2]."&tijd=".$arr[3]."&achternaam=".$arr[1]."&voorletter=\";\r\n";
+			print "wget -O ".$arr[2]."-".$arr[3].".pdf \"$downloadurl/pdf.php?baan=&dicipline=".$arr[3]."&knsa=".$arr[2]."&tijd=".$arr[3]."&achternaam=".$arr[1]."&voorletter=\";\r\n";
 		}
 		else
 		{

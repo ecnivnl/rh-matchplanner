@@ -6,4 +6,6 @@ $vereniging['postcode'] = "";
 $vereniging['plaats'] = "";
 $vereniging['knsa'] = "";
 
+$downloadurl = "";
+
 ?>
