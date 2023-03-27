@@ -97,7 +97,7 @@ $pdf->Cell(80,25,'',1,0);
 $pdf->Ln(40);
 
 
-$pdf->Image('logo_rh.png',10,230,30);
+$pdf->Image($vereniging['logo'],10,230,30);
 $pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['naam'],0,0);$pdf->Ln(6);
 $pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['adres'],0,0);$pdf->Ln(6);
 $pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['postcode']." ".$vereniging['plaats'],0,0);$pdf->Ln(6);
