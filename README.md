@@ -26,3 +26,4 @@ De volgende feature requests staan nog op de planning:
 - Koppeling met een CCV-pinautomaat
 - Versturen van mails
 - Versturen van betaallinks (via Mollie)
+- Streepjescode op de wedstrijdbriefjes
