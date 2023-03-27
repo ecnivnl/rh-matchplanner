@@ -40,27 +40,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		print "Naam: ".$bezoekers[$knsa]['naam']."<br>";
 		$totaalprijs = number_format($bezoekers[$knsanummer]['aantal']*$wedstrijdprijs,2);
 		print "Kosten: $totaalprijs<br>";
+		//eventueel aansturen pinautomaat
 		
 		$i = 0;
 		while($i < sizeof($bezoekers[$knsanummer]['diciplines']))
 		{
 			print "Aanmelden voor dicipline <b>".$bezoekers[$knsanummer]['diciplines'][$i]."</b><br>";
+			//eventueel: printen 2 stickers voor op de kaarten (dymo?)
 			$i++;
 		}
 		print "<br><br>";
+		//eventueel: registreren in database om bij te houden wie er wel/niet is
+		//of: eventueel aanpassen baanplanner_export.csv met 'aanwezig'
+		
 	}
 }
 
-
-		print "
-		
-		<form action=\"aanmelden.php\" method=\"POST\">
-		  KNSA-licentienummer: <input type=\"text\" name=\"knsa\" value=\"\" autofocus><br>
-		  <input type=\"submit\" value=\"Aanmelden\">
-		</form>
-		
-		<img width=\"100\" src=\"".$vereniging['logo']."\">
-		";
+print "
+	<form action=\"aanmelden.php\" method=\"POST\">
+	  KNSA-licentienummer: <input type=\"text\" name=\"knsa\" value=\"\" autofocus><br>
+	  <input type=\"submit\" value=\"Aanmelden\">
+	</form>
+	
+	<img width=\"100\" src=\"".$vereniging['logo']."\">
+	";
 
 
 
