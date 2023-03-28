@@ -58,6 +58,10 @@ De volgende feature requests staan nog op de planning:
 - Koppeling met een CCV-pinautomaat
 - Versturen van mails
 
+## Gaan we hier ook beter van schieten?
+
+Wat denk je?
+
 ## Legal info
 
 - Developer is niet aansprakelijk voor de inzet van dit pakket, noch de gevolgen hiervan
