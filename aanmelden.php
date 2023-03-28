@@ -52,18 +52,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		print "Kosten: $totaalprijs<br>";
 		print "<a target=\"_blank\" href=\"kwitantie.php?knsa=$knsa\">Kwitantie</a><br>";
 		//eventueel aansturen pinautomaat
-		
+		$dp = "";
 		$i = 0;
 		while($i < sizeof($bezoekers[$knsanummer]['diciplines']))
 		{
 			print "Aanmelden voor dicipline <b>".$bezoekers[$knsanummer]['diciplines'][$i]."</b><br>";
+			$dp .= "".$bezoekers[$knsanummer]['diciplines'][$i].";";
 			//eventueel: printen 2 stickers voor op de kaarten (dymo?)
 			$i++;
 		}
 		print "<br><br>";
 		$nu = date("Y-m-d H:i:s");
 		$current = file_get_contents("checkin.log");
-		$current .= $knsanummer.";".$nu."\n";
+		$current .= $knsanummer.";".$nu.";$dp\n";
 		file_put_contents("checkin.log", $current);
 		
 	}
