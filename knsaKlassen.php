@@ -57,7 +57,7 @@ while($i < sizeof($arr))
 	$i++;
 }
 
-if($_GET['download'] == "yes")
+if(@$_GET['download'] == "yes")
 {
 	print "<PRE>";
 	print_r($knsaregister);

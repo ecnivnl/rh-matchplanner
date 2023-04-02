@@ -14,11 +14,11 @@ require_once("knsaKlassen.php");
 $i = 0;
 if ($file = fopen("baanplanner_export.csv", "r")) {
 	while(!feof($file)) {
-        $line = fgets($file);
-       $arr = explode(";",$line);
+		$line = fgets($file);
+		$arr = explode(";",$line);
 
-	  if($i != 0)
-	   {
+		if($i != 0)
+		{
 			// print_r($arr);	  
 			$regel['dag'] = trim($arr[0]);
 			$regel['datum'] = trim($arr[1]);
@@ -34,13 +34,19 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 			if(trim($arr[20]) == "KKP")
 			{
 				// print "KKP - $knsa";
-				$regel['klasse'] = $knsaregister[$knsa]['SEPL'];
+				if (isset($knsaregister[$knsa]['SEPL']))
+				{
+					$regel['klasse'] = $knsaregister[$knsa]['SEPL'];
+				}
 				
 			}
 			else if(trim($arr[20]) == "GKP")
 			{
 				// print "GKP";
-				$regel['klasse'] = $knsaregister[$knsa]['SEPZ'];
+				if (isset($knsaregister[$knsa]['SEPZ']))
+				{
+					$regel['klasse'] = $knsaregister[$knsa]['SEPZ'];
+				}
 			}
 			else
 			{
@@ -48,9 +54,9 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 			}
 			
 			print "".$regel['dag'].";".$regel['datum'].";".$regel['baan'].";".$regel['serie'].";".$regel['voorletter'].";".$regel['achternaam'].";".$regel['vernummer'].";".$regel['vernaam'].";".$regel['knsa'].";".$regel['klasse'].";;\r\n";
-	   }
-	   $i++;
-    }
+		}
+	$i++;
+	}
     fclose($file);
 }   
 ?> 
