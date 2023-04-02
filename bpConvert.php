@@ -9,7 +9,7 @@
  ?>
 dag;datum;baan;serie;voorletter;achternaam;vernummer;vernaam;knsa;klasse;;
 <?php
-
+require_once("functions.php");
 require_once("knsaKlassen.php");
 $i = 0;
 if ($file = fopen("baanplanner_export.csv", "r")) {
