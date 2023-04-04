@@ -5,21 +5,22 @@
  * See https://github.com/ecnivnl/rh-matchplanner/ for license 
  * Written by Vince van Domburg (@ecnivnl)
  */
- 
- ?>
-Wedstrijduitslagen-formulier ;
-Naam organiserende vereniging:;;SSV Robin Hood;;;;Aangeleverd door (naam):;Vince van Domburg;
-Verenigingscode:;;2570;;;;Licentienummer:;183695;
-Soort/naam wedstrijd:;;SP-Service Pistool - 25/26 Maart 2023;;;;Telefoonnummer:;0621493330;
-Datum van wedstrijd:;;26-3-2023;;;;E-mailadres:;info@ssvrobinhood.nl;
-Plaats van wedstrijd:;;Woerden;;;;Akkoord DTC/LTC:;;
+
+require_once("functions.php");
+require_once("knsaKlassen.php");
+require_once("baanplannerCategorie.php");
+
+ ?>Wedstrijduitslagen-formulier ;
+Naam organiserende vereniging:;;<?php print $vereniging['naam'];?>;;;;Aangeleverd door (naam):;<?php print $vereniging['contact'];?>;
+Verenigingscode:;;<?php print $vereniging['knsa'];?>;;;;Licentienummer:;<?php print $vereniging['contactKnsa'];?>;
+Soort/naam wedstrijd:;;<?php print $wedstrijd;?>;;;;Telefoonnummer:;<?php print $vereniging['contactTel'];?>;
+Datum van wedstrijd:;;<?php print $wedstrijddatum ?>;;;;E-mailadres:;<?php print $vereniging['contactEmail'];?>;
+Plaats van wedstrijd:;;<?php print $vereniging['plaats'];?>;;;;Akkoord DTC/LTC:;;
 ;;;
 Positie;Discipline;Categorie;Klasse;Licentie;Achternaam;Verenigingscode;Verenigingsnaam;S1;S2;S3;S4;S5;S6;Innerten;Totaal serie;Totaal finale;Totaal serie + finale;
 <?php
 $koptekst = false;
-require_once("functions.php");
-require_once("knsaKlassen.php");
-require_once("baanplannerCategorie.php");
+
 $i = 0;
 if ($file = fopen("UUF.csv", "r")) {
 	while(!feof($file)) {
@@ -97,6 +98,8 @@ if ($file = fopen("UUF.csv", "r")) {
 				{
 					
 				}
+				$arr[3] = strtoupper($arr[3]);
+				if($arr[3] == ""){$arr[3] = "H";}
 				print "".$arr[0].";".$arr[1].";".$arr[2].";".$arr[3].";".$arr[4].";".$arr[5].";".$arr[6].";".$arr[7].";".$arr[8].";".$arr[9].";".$arr[10].";".$arr[10].";".$arr[12].";".$arr[13].";".$arr[14].";".$arr[15].";".$arr[16].";".$arr[17].";\r\n";
 			}
 		}
@@ -105,5 +108,3 @@ if ($file = fopen("UUF.csv", "r")) {
     fclose($file);
 }   
 ?> 
-
-
