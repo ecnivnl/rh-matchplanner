@@ -33,7 +33,6 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 
 			if(trim($arr[20]) == "KKP")
 			{
-				// print "KKP - $knsa";
 				if (isset($knsaregister[$knsa]['SEPL']))
 				{
 					$regel['klasse'] = $knsaregister[$knsa]['SEPL'];
@@ -42,7 +41,6 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
 			}
 			else if(trim($arr[20]) == "GKP")
 			{
-				// print "GKP";
 				if (isset($knsaregister[$knsa]['SEPZ']))
 				{
 					$regel['klasse'] = $knsaregister[$knsa]['SEPZ'];
