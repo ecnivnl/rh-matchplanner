@@ -7,6 +7,7 @@
  */
 
 require_once("functions.php");
+include("config.php");
 
 $classArray = array();
 
@@ -55,7 +56,7 @@ foreach ($classArray AS $discipline => $discData)
 			$pdf->AddPage();
 			$page++;
 			$pdf->SetFont('Helvetica','B',14);
-			$pdf->Cell(50,10,"Wedstrijduitslag ".$wedstrijd,0,0);
+			$pdf->Cell(50,10,"Wedstrijduitslag $wedstrijd - $discipline - $category - $class Klasse",0,0);
 			$pdf->Ln(6);
 			$pdf->SetFont('Helvetica','B',12);
 			$naam = ltrim($_GET['voorletter']." ".$achternaam);
