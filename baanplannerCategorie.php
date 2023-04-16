@@ -6,9 +6,7 @@
  * Written by Vince van Domburg (@ecnivnl)
  */
  
- ?>
 
-<?php
 error_reporting(0);
 $knsaCat = array();
 $i = 0;
@@ -37,6 +35,4 @@ if ($file = fopen("baanplanner_export.csv", "r")) {
     fclose($file);
 }   
 // print_r($knsaCat);
-?> 
-
-
+?>
