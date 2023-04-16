@@ -58,20 +58,11 @@ foreach ($classArray AS $discipline => $discData)
 			$pdf->SetFont('Helvetica','B',14);
 			$pdf->Cell(50,10,"Wedstrijduitslag $wedstrijd - $discipline - $category - $class Klasse",0,0);
 			$pdf->Ln(6);
-			$pdf->SetFont('Helvetica','B',12);
-			$naam = ltrim($_GET['voorletter']." ".$achternaam);
-			$pdf->Cell(10,10,$naam,0,0);$pdf->SetFont('Helvetica','',12);
-			$pdf->Ln(6);
-			$pdf->Cell(10,10,"KNSA-nummer: ".$_GET['knsa'],0,0);
-			$pdf->Ln(6);
-			$pdf->Cell(10,10,"Dicipline: ".$_GET['dicipline'],0,0);
-			$pdf->Ln(6);$pdf->Ln(6);
-			$pdf->SetFont('Helvetica','B',12);
+			$pdf->SetFont('Helvetica','B',10);
+			$pdf->Cell(10, 10, "KNSA Nummer", 1, 0);
+			
+			
 
-
-			$pdf->Cell(10,10,"Uitslag / wedstrijdbriefje",'',12);
-			$pdf->Ln(6);
-			$pdf->SetFont('Helvetica','B',12);
 			
 			
 			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['naam'],0,0);$pdf->Ln(6);
