@@ -56,22 +56,38 @@ foreach ($classArray AS $discipline => $discData)
 			$pdf->AddPage();
 			$page++;
 			$pdf->SetFont('Helvetica','B',14);
+			$pdf->Cell(0,12,$vereniging['naam'],0,0);$pdf->Ln(6);
+			$pdf->Cell(0,12,$vereniging['adres'],0,0);$pdf->Ln(6);
+			$pdf->Cell(0,12,$vereniging['postcode']." ".$vereniging['plaats'],0,0);$pdf->Ln(6);
+			$pdf->Cell(0,12,'KNSA: '.$vereniging['knsa'],0,0);
+			$pdf->Ln(15);
+			
+			$pdf->SetFont('Helvetica','B',14);
 			$pdf->Cell(50,10,"Wedstrijduitslag $wedstrijd - $discipline - $category - $class Klasse",0,0);
-			$pdf->Ln(6);
+			$pdf->Ln(20);
 			$pdf->SetFont('Helvetica','B',10);
-			$pdf->Cell(10, 10, "KNSA Nummer", 1, 0);
+			$pdf->Cell(20, 10, "Positie", 1, 0);
+			$pdf->Cell(80, 10, "Naam", 1, 0);
+			$pdf->Cell(30, 10, "Licentie", 1, 0);
+			$pdf->Cell(0, 10, "Score", 1, 1);
+			
+			$pos = 1;
+			foreach ($classData AS $score => $deelnemerData)
+			{
+				$pdf->Cell(20, 10, $pos, 1, 0);
+				$pdf->Cell(80, 10, $deelnemerData[1], 1, 0);
+				$pdf->Cell(30, 10, $deelnemerData[0], 1, 0);
+				$pdf->Cell(0, 10, $deelnemerData[11], 1, 1);
+				$pos++;
+			}
 			
 			
-
 			
 			
-			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['naam'],0,0);$pdf->Ln(6);
-			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['adres'],0,0);$pdf->Ln(6);
-			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['postcode']." ".$vereniging['plaats'],0,0);$pdf->Ln(6);
-			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,'KNSA: '.$vereniging['knsa'],0,0);$pdf->Ln(6);
+			
 		}
 	}
 }
 
-$pdf->Output("Scoreformulier_".$_GET['knsa'].".pdf", 'I');
+$pdf->Output("Wedstrijduitslagen.pdf", 'I');
 ?>
