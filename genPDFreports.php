@@ -48,9 +48,9 @@ $pdf->AliasNbPages();
 
 foreach ($classArray AS $discipline => $discData)
 {
-	foreach ($discData AS $category AS $catData)
+	foreach ($discData AS $category => $catData)
 	{
-		foreach ($catData AS $class AS $classData)
+		foreach ($catData AS $class => $classData)
 		{
 			$pdf->AddPage();
 			$page++;
