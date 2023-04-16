@@ -41,5 +41,45 @@ while (!feof($fp))
 }
 fclose($fp);
 
-print_r($classArray['SPKKP']);
+require_once("fpdf/fpdf.php");
+
+$pdf=new FPDF('P','mm','A4');
+$pdf->AliasNbPages();
+
+foreach ($classArray AS $discipline => $discData)
+{
+	foreach ($discData AS $category AS $catData)
+	{
+		foreach ($catData AS $class AS $classData)
+		{
+			$pdf->AddPage();
+			$page++;
+			$pdf->SetFont('Helvetica','B',14);
+			$pdf->Cell(50,10,"Wedstrijduitslag ".$wedstrijd,0,0);
+			$pdf->Ln(6);
+			$pdf->SetFont('Helvetica','B',12);
+			$naam = ltrim($_GET['voorletter']." ".$achternaam);
+			$pdf->Cell(10,10,$naam,0,0);$pdf->SetFont('Helvetica','',12);
+			$pdf->Ln(6);
+			$pdf->Cell(10,10,"KNSA-nummer: ".$_GET['knsa'],0,0);
+			$pdf->Ln(6);
+			$pdf->Cell(10,10,"Dicipline: ".$_GET['dicipline'],0,0);
+			$pdf->Ln(6);$pdf->Ln(6);
+			$pdf->SetFont('Helvetica','B',12);
+
+
+			$pdf->Cell(10,10,"Uitslag / wedstrijdbriefje",'',12);
+			$pdf->Ln(6);
+			$pdf->SetFont('Helvetica','B',12);
+			
+			
+			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['naam'],0,0);$pdf->Ln(6);
+			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['adres'],0,0);$pdf->Ln(6);
+			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,$vereniging['postcode']." ".$vereniging['plaats'],0,0);$pdf->Ln(6);
+			$pdf->Cell(40,12,'',0,0);$pdf->Cell(80,12,'KNSA: '.$vereniging['knsa'],0,0);$pdf->Ln(6);
+		}
+	}
+}
+
+$pdf->Output("Scoreformulier_".$_GET['knsa'].".pdf", 'I');
 ?>
